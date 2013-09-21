@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Pairing"
+date: 2013-09-21 12:30
+comments: true
+categories: coding
+---
+The more I pair program, the more I enjoy it. It's very much like sharing the platform with a buddy. Here are a few pros I've found:
+
+**Pacing**: Sharing the platform makes it easier to time when you should be lifting - it's much easier to prevent your breaks between sets from being too short or too long. Similarly, pair programming can helps pace yourself--having someone to code with means that you can talk through your thought process as you work.
+
+**Staying Focused**: Having a friend can keep you from getting distracted and keep you on task and in the zone.
+
+**Share the Knowledge**: I always learn something new from my partner. Whether it's a lifehack, computer shortcut, or a tip for just doing it better. It's always an educational experience to work with someone.
+
+Pairing can be very uncomfortable at because it requires you try to accommodate someone else's working style and having someone watch you work, but there are some definite benefits. And as with a lot of things, practice helps! Looking forward to more pairing in my life.
