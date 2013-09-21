@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[tearin' it up]]></title>
-  <link href="http://lauyeung.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: coding | tearin' it up]]></title>
+  <link href="http://lauyeung.github.io/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://lauyeung.github.io/"/>
   <updated>2013-09-21T14:10:11-04:00</updated>
   <id>http://lauyeung.github.io/</id>
@@ -27,15 +27,6 @@
 <p><strong>Share the Knowledge</strong>: I always learn something new from my partner. Whether it&rsquo;s a lifehack, computer shortcut, or a tip for just doing it better. It&rsquo;s always an educational experience to work with someone.</p>
 
 <p>Pairing can be very uncomfortable at because it requires you try to accomodate someone else&rsquo;s working style and having someone watch you work, but there are some definite benefits. And as with a lot of things, practice helps! Looking forward to more pairing in my life.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First!]]></title>
-    <link href="http://lauyeung.github.io/blog/2013/08/31/first/"/>
-    <updated>2013-08-31T16:39:00-04:00</updated>
-    <id>http://lauyeung.github.io/blog/2013/08/31/first</id>
-    <content type="html"><![CDATA[<p>Humble beginnings! Here&rsquo;s a first post.</p>
 ]]></content>
   </entry>
   
