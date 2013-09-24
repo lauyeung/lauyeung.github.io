@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: coding, | tearin' it up]]></title>
-  <link href="http://lauyeung.github.io/blog/categories/coding/atom.xml" rel="self"/>
+  <title><![CDATA[Category: rails | tearin' it up]]></title>
+  <link href="http://lauyeung.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://lauyeung.github.io/"/>
   <updated>2013-09-24T13:33:10-04:00</updated>
   <id>http://lauyeung.github.io/</id>

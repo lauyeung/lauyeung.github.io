@@ -9,7 +9,7 @@
   <meta name="author" content="Louise Au Yeung">
 
   
-  <meta name="description" content="The more I pair program, the more I enjoy it. It&rsquo;s very much like sharing the platform with a buddy. Here are a few pros I&rsquo;ve found: &hellip;">
+  <meta name="description" content="Recently at Launch Academy, we learnt about sessions and cookies as a means to store data between requests. Using the session hash in Rails means we &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,125 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/24/ternary-operators/">Using Ternary Operators to Store Sessions in Rails</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-24T12:09:00-04:00" pubdate data-updated="true">Sep 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently at <a href="http://www.launchacademy.com/">Launch Academy</a>, we learnt about sessions and cookies as a means to store data between requests. Using the <code>session</code> hash in Rails means we can persist data.</p>
+
+<p>In our example, we stored a registration id to the <code>session</code> hash in the create controller action so that we could access it in subsequent visits to the new page. Since there isn&rsquo;t always necessarily a <code>session</code> available, we needed to make sure we wouldn&rsquo;t encouter exceptions when looking for the last <code>session</code>.</p>
+
+<p>Here are a 3 methods I tried:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># GET /registrations/new</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Method 1</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">new</span>
+</span><span class='line'>  <span class="c1"># Use find_by_id to try and locate a Registration with the last registration id</span>
+</span><span class='line'>  <span class="c1"># Using find_by_id instead of find since find_by_id returns nil when not found</span>
+</span><span class='line'>  <span class="c1"># (find throws an exception)</span>
+</span><span class='line'>  <span class="vi">@last_registration</span> <span class="o">=</span> <span class="no">Registration</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">session</span><span class="o">[</span><span class="ss">:last_registration_id</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="vi">@registration</span> <span class="o">=</span> <span class="no">Registration</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Sets the registration email as the last registration email if it exists</span>
+</span><span class='line'>  <span class="c1"># (prepopulating the form would happen in the view)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="vi">@last_registration</span><span class="o">.</span><span class="n">present?</span>
+</span><span class='line'>    <span class="vi">@registration</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="vi">@last_registration</span><span class="o">.</span><span class="n">email</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Method 2</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">new</span>
+</span><span class='line'>  <span class="c1"># Looks for last registration the same way as method 1</span>
+</span><span class='line'>  <span class="vi">@last_registration</span> <span class="o">=</span> <span class="no">Registration</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">session</span><span class="o">[</span><span class="ss">:last_registration_id</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="vi">@registration</span> <span class="o">=</span> <span class="no">Registration</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Instead of using an if statement, use .try to pull the last registration email address</span>
+</span><span class='line'>  <span class="c1"># (results in nil instead of throwing an error if last registration email doesn&#39;t exist)</span>
+</span><span class='line'>  <span class="vi">@registration</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="vi">@last_registration</span><span class="o">.</span><span class="n">try</span><span class="p">(</span><span class="ss">:email</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Method 3</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">new</span>
+</span><span class='line'>  <span class="c1"># Here comes the ternary operator (condition ? if_true : if_false)</span>
+</span><span class='line'>  <span class="c1"># Use ternary operator to check if there is a session last registration id and</span>
+</span><span class='line'>  <span class="c1"># if there is, the last registration email is set to that</span>
+</span><span class='line'>  <span class="c1"># If there is no last registration id, last registration email is set to a blank string</span>
+</span><span class='line'>  <span class="vi">@last_registration_email</span> <span class="o">=</span> <span class="n">session</span><span class="o">[</span><span class="ss">:last_registration_id</span><span class="o">]</span> <span class="p">?</span> <span class="no">Registration</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">session</span><span class="o">[</span><span class="ss">:last_registration_id</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">email</span> <span class="p">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>  <span class="vi">@registration</span> <span class="o">=</span> <span class="no">Registration</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The last method is definitely the most concise&mdash;and I think pretty expressive too.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -161,6 +280,10 @@
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/24/ternary-operators/">Using Ternary Operators to Store Sessions in Rails</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/09/21/pairing/">Pairing</a>
