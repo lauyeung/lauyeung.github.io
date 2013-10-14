@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cheatsheet | tearin' it up]]></title>
+  <link href="http://lauyeung.github.io/blog/categories/cheatsheet/atom.xml" rel="self"/>
+  <link href="http://lauyeung.github.io/"/>
+  <updated>2013-10-14T16:09:44-04:00</updated>
+  <id>http://lauyeung.github.io/</id>
+  <author>
+    <name><![CDATA[Louise Au Yeung]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Beginner Vim Commands]]></title>
+    <link href="http://lauyeung.github.io/blog/2013/10/14/beginner-vim-commands/"/>
+    <updated>2013-10-14T15:08:00-04:00</updated>
+    <id>http://lauyeung.github.io/blog/2013/10/14/beginner-vim-commands</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m new to <a href="http://www.vim.org/">Vim</a> but I&rsquo;ve been using <a href="http://www.sublimetext.com/">Sublime Text</a> in vintage mode to practice. I&rsquo;ve tried a few tutorials but I&rsquo;ve found it more helpful to actually learn by using the commands while coding.</p>
+
+<p>I wanted to share my starter set of commands and I hope I remember to add blog posts as I add to my repetoire.</p>
+
+<table>
+  <th><strong>Shortcut</strong></th>
+  <tr>
+    <td>gg</td>
+    <td>go to the top</td>
+  </tr>
+  <tr>
+    <td>G</td>
+    <td>go to the bottom</td>
+  </tr>
+  <tr>
+    <td>i</td>
+    <td>insert (puts cursor before marker location</td>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>append (puts cursor after marker location</td>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>deletes character above the cursor</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>deletes character before the cursor</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>delete from cursor to end of the line</td>
+  </tr>
+  <tr>
+    <td>dd</td>
+    <td>deletes a row</td>
+  </tr>
+  <tr>
+    <td>diw</td>
+    <td>deletes a word</td>
+  </tr>
+  <tr>
+    <td>ciw</td>
+    <td>deletes a word and goes to insert mode</td>
+  </tr>
+</table>
+
+
+<br>
+
+
+<p><strong>How to cut/copy and paste:</strong><br>
+1. v (or V for whole lines) to highlight what you want to cut or copy<br>
+2. d (for cut), y (for copy)<br>
+3. p to paste after cursor (P for before the cursor)<br></p>
+]]></content>
+  </entry>
+  
+</feed>
