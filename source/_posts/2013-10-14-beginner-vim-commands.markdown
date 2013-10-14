@@ -22,11 +22,11 @@ I wanted to share my starter set of commands and I hope I remember to add blog p
   </tr>
   <tr>
     <td>i</td>
-    <td>insert (puts cursor before marker location</td>
+    <td>insert (puts cursor before marker location)</td>
   </tr>
   <tr>
     <td>a</td>
-    <td>append (puts cursor after marker location</td>
+    <td>append (puts cursor after marker location)</td>
   </tr>
   <tr>
     <td>x</td>
