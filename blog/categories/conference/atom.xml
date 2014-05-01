@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: coding, | tearin' it up]]></title>
-  <link href="http://lauyeung.github.io/blog/categories/coding/atom.xml" rel="self"/>
+  <title><![CDATA[Category: conference | tearin' it up]]></title>
+  <link href="http://lauyeung.github.io/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://lauyeung.github.io/"/>
   <updated>2014-04-30T21:59:08-04:00</updated>
   <id>http://lauyeung.github.io/</id>
@@ -234,131 +234,6 @@ Latency on phones is high which is why it’s slow and the number of users with 
 <p>Between steps 1 &amp; 2 &ndash; need to convince people to build and maybe between 2 &amp; 3 &ndash; need to convince to ship (lots of convincing needs to happen)</p>
 
 <p>Find ways to bring ideas while mitigating risk</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Beginner Vim Commands]]></title>
-    <link href="http://lauyeung.github.io/blog/2013/10/14/beginner-vim-commands/"/>
-    <updated>2013-10-14T15:08:00-04:00</updated>
-    <id>http://lauyeung.github.io/blog/2013/10/14/beginner-vim-commands</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m new to <a href="http://www.vim.org/">Vim</a> but I&rsquo;ve been using <a href="http://www.sublimetext.com/">Sublime Text</a> in vintage mode to practice. I&rsquo;ve tried a few tutorials but I&rsquo;ve found it more helpful to actually learn by using the commands while coding.</p>
-
-<p>I wanted to share my starter set of commands and I hope I remember to add blog posts as I add to my repetoire.</p>
-
-<table>
-  <th><strong>Shortcut</strong></th>
-  <tr>
-    <td>gg</td>
-    <td>go to the top</td>
-  </tr>
-  <tr>
-    <td>G</td>
-    <td>go to the bottom</td>
-  </tr>
-  <tr>
-    <td>i</td>
-    <td>insert (puts cursor before marker location)</td>
-  </tr>
-  <tr>
-    <td>a</td>
-    <td>append (puts cursor after marker location)</td>
-  </tr>
-  <tr>
-    <td>x</td>
-    <td>deletes character above the cursor</td>
-  </tr>
-  <tr>
-    <td>X</td>
-    <td>deletes character before the cursor</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>delete from cursor to end of the line</td>
-  </tr>
-  <tr>
-    <td>dd</td>
-    <td>deletes a row</td>
-  </tr>
-  <tr>
-    <td>diw</td>
-    <td>deletes a word</td>
-  </tr>
-  <tr>
-    <td>ciw</td>
-    <td>deletes a word and goes to insert mode</td>
-  </tr>
-</table>
-
-
-<br>
-
-
-<p><strong>How to cut/copy and paste:</strong><br>
-1. v (or V for whole lines) to highlight what you want to cut or copy<br>
-2. d (for cut), y (for copy)<br>
-3. p to paste after cursor (P for before the cursor)<br></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using ternary operators to store sessions in Rails]]></title>
-    <link href="http://lauyeung.github.io/blog/2013/09/24/ternary-operators/"/>
-    <updated>2013-09-24T12:09:00-04:00</updated>
-    <id>http://lauyeung.github.io/blog/2013/09/24/ternary-operators</id>
-    <content type="html"><![CDATA[<p>Recently at <a href="http://www.launchacademy.com/">Launch Academy</a>, we learnt about sessions and cookies as a means to store data between requests. Using the <code>session</code> hash in Rails means we can persist data.</p>
-
-<p>In our example, we stored a registration id to the <code>session</code> hash in the create controller action so that we could access it in subsequent visits to the new page. Since there isn&rsquo;t always necessarily a <code>session</code> available, we needed to make sure we wouldn&rsquo;t encouter exceptions when looking for the last <code>session</code>.</p>
-
-<p>Here are a 3 methods I tried:
-```ruby</p>
-
-<h1>GET /registrations/new</h1>
-
-<h1>Method 1</h1>
-
-<p>def new
-  # Use find_by_id to try and locate a Registration with the last registration id
-  # Using find_by_id instead of find since find_by_id returns nil when not found
-  # (find throws an exception)
-  @last_registration = Registration.find_by_id(session[:last_registration_id])
-  @registration = Registration.new</p>
-
-<p>  # Sets the registration email as the last registration email if it exists
-  # (prepopulating the form would happen in the view)
-  if @last_registration.present?</p>
-
-<pre><code>@registration.email = @last_registration.email
-</code></pre>
-
-<p>  end
-end</p>
-
-<h1>Method 2</h1>
-
-<p>def new
-  # Looks for last registration the same way as method 1
-  @last_registration = Registration.find_by_id(session[:last_registration_id])
-  @registration = Registration.new</p>
-
-<p>  # Instead of using an if statement, use .try to pull the last registration email address
-  # (results in nil instead of throwing an error if last registration email doesn&rsquo;t exist)
-  @registration.email = @last_registration.try(:email)
-end</p>
-
-<h1>Method 3</h1>
-
-<p>def new
-  # Here comes the ternary operator (condition ? if_true : if_false)
-  # Use ternary operator to check if there is a session last registration id and
-  # if there is, the last registration email is set to that
-  # If there is no last registration id, last registration email is set to a blank string
-  @last_registration_email = session[:last_registration_id] ? Registration.find_by_id(session[:last_registration_id]).email : &lsquo;&rsquo;
-  @registration = Registration.new
-end
-```</p>
-
-<p>The last method is definitely the most concise&mdash;and I think pretty expressive too.</p>
 ]]></content>
   </entry>
   

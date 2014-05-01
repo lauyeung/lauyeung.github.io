@@ -4,7 +4,7 @@
   <title><![CDATA[tearin' it up]]></title>
   <link href="http://lauyeung.github.io/atom.xml" rel="self"/>
   <link href="http://lauyeung.github.io/"/>
-  <updated>2013-10-14T17:48:42-04:00</updated>
+  <updated>2014-04-30T21:59:08-04:00</updated>
   <id>http://lauyeung.github.io/</id>
   <author>
     <name><![CDATA[Louise Au Yeung]]></name>
@@ -12,6 +12,230 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from An Event Apart (Boston, April 2014)]]></title>
+    <link href="http://lauyeung.github.io/blog/2014/04/30/notes-from-an-event-apart-boston-april-2014/"/>
+    <updated>2014-04-30T20:01:00-04:00</updated>
+    <id>http://lauyeung.github.io/blog/2014/04/30/notes-from-an-event-apart-boston-april-2014</id>
+    <content type="html"><![CDATA[<h2>Day 1</h2>
+
+
+<h3>Understanding Web Design (Jeffrey Zeldman, Founder, Happy Cog and A List Apart)</h3>
+
+
+<ul>
+<li>Anything that gets in the way of users doing what they want to do is bad web design</li>
+<li>Web design is more like type-face, architecture &ndash; it steps away and allows the user or content to produce the meaning</li>
+<li>Great websites makes interaction easy</li>
+<li>Guides you subtly toward your heart’s desire (looks passive, but it’s active)</li>
+<li>Can be invisible or in your face</li>
+<li>Great web design <em>delights</em></li>
+</ul>
+
+
+<h3>Designing Using Data (Sarah Paramenter, Founder, You Know Who)</h3>
+
+
+<ul>
+<li>Research and data helps back up decisions of why you are changing something (and in turn &ndash; helps to remove resistance to that change)</li>
+<li>Avoid vanity metrics (metrics that can’t be acted upon, e.g. hits, pageviews)</li>
+<li>Track users and their habits (identify, segment, track)</li>
+<li>Leverage Facebook to find out who interacts with your content (use ads and Facebook insights)</li>
+<li>Test phrasing (&ldquo;See plans and pricing&rdquo; performed better than &ldquo;Free trial&rdquo; for CTA because it was less commital)</li>
+</ul>
+
+
+<p>Recommended Tools<br>
+&ndash; <a href="http://www.truesocialmetrics.com/">TrueSocialMetrics</a><br>
+&ndash; <a href="http://www.minimalytics.com/">Minimalytics</a><br>
+&ndash; <a href="http://www.crazyegg.com/">Crazy Egg</a><br>
+&ndash; <a href="https://www.optimizely.com">Optimizely</a><br>
+&ndash; <a href="http://www.browserstack.com/">BrowserStack</a><br></p>
+
+<h3>Responsive Design is Still Hard/Easy! Be Afraid/Don’t Worry! (Dan Mall, Founder & Design Director, SuperFriendly)</h3>
+
+
+<p><strong>Inventory</strong></p>
+
+<ul>
+<li>Content inventory: identify all pages on the site and what the page is supposed to do</li>
+<li>Pattern inventory: identify the atoms / molecules / organisms on the website (can do this in spreadsheet, photoshop, coded, etc, whatever’s fastest), check out <a href="http://patternlab.io/about.html">Pattern Lab</a></li>
+</ul>
+
+
+<p><strong>Sketch</strong></p>
+
+<ul>
+<li>Lay everything out simply (use grey boxes)</li>
+<li>Number them &amp; block them out on the page</li>
+<li>Easy to layout and make responsive</li>
+<li>Simple visualization allows for dialog about layout<br>
+Check out <a href="http://building.seesparkbox.com/content-prototype/index.php">Sparkbox example</a></li>
+</ul>
+
+
+<p><strong>Assemble</strong></p>
+
+<ul>
+<li>Create organisms</li>
+<li>Presets: list out all the <em>potential</em> organisms for each page</li>
+<li>Once organisms and presets are created/prepped (mise en place!), putting pages together should be easy</li>
+<li>Check out <a href="http://patternprimer.adactio.com/">Pattern Primer</a></li>
+</ul>
+
+
+<h3>Screen Time (Luke Wroblewski, CEO & Co-Founder of Input Factory Inc.)</h3>
+
+
+<ul>
+<li>Know your screen (increasingly mobile)<br></li>
+<li>Output (high resolution, widescreen aspect rations, media queries know more than width)<br></li>
+<li>Input (support all inputs, communicate what’s possible, screen size is poor proxy but it’s all we’ve got)<br></li>
+<li>Posture (design to human scale, environments, not to screen width, distance from device impacts interactions)<br></li>
+</ul>
+
+
+<p>Note: there is a need to optimize tablets for both horizontal and vertical orientations (because both orientations are used!)</p>
+
+<h3>Content/Communication (Kristina Halvorson, Author, Content Strategy for the Web)</h3>
+
+
+<ul>
+<li>Principles: internally motivates us to do things that are good and right, unites us in our day-to-day work<br></li>
+<li>Strategy: good strategy will provide constraints and keeps us accountable<br></li>
+<li>Process: process should evolve (retrospectives to figure out what works and what doesn&rsquo;t), good process allows us to move together<br></li>
+<li>Roles: roles give us a place, use the <a href="http://thebuildnetwork.com/leadership/management/raci-model/">RACI model</a><br></li>
+<li>Perceptions: prevent crossed wires or communication issues, ask for clarification when needed, perceptions give way to perspective<br></li>
+</ul>
+
+
+<p>All this stuff is important because:<br>
+&ldquo;A study of over 350 people in 6 business units at a financial services company found that the greatest predictor of a team&rsquo;s achievement was how the members felt about one another.&rdquo;<br>
+&ndash; Shawn Achor, The Happiness Advantage</p>
+
+<h3>UX Strategy Means Business (Jared Spool, Founder, User Interface Engineering)</h3>
+
+
+<p>Great content + Great design = Great UX</p>
+
+<p>Business Strategy Priorities<br>
+1. Increase revenue<br>
+2. Decrease costs<br>
+3. Increase new business<br>
+4. Increase existing business<br>
+5. Shareholder value<br></p>
+
+<p>The 5 strategic priorities are a tool for mapping our design intent into business objectives</p>
+
+<p>Business Model Options<br>
+&ndash; Metered paywalls<br>
+&ndash; Repurposed content<br>
+&ndash; Supporting product sales<br>
+&ndash; In-app purchases<br>
+&ndash; Alternate channel revenue<br>
+&ndash; Content distribution<br>
+&ndash; Advertising (ideally avoid this)<br></p>
+
+<p>Advertising: disruptive and corporate (doesn’t add value for the user)<br>
+Experience: in the moment of what the user is doing</p>
+
+<h2>Day 2</h2>
+
+
+<h3>The Long Web (Jeremy Keith, Maker of Websites)</h3>
+
+
+<p><strong>Progressive Enhancement</strong></p>
+
+<ul>
+<li>Start using html elements that are not universally supported and because of HTML error-handling, things will still work</li>
+<li>Not designing for the lowest common denominator but starting there (e.g. escalators are progressively enhanced stairs)</li>
+<li>Make sure you build a strong base</li>
+<li>JS doesn’t share the error-handling of HTML/CSS &ndash; what happens when JS doesn&rsquo;t load appropriately?</li>
+<li>Need to think long term and having a strong HTML base that is backwards compatible is the way to do it</li>
+</ul>
+
+
+<h3>Responsive Design Performance Budget (Paul Irish, Developer advocate, Google Chrome)</h3>
+
+
+<p>71% expect sites to load faster on their phone than on their laptop</p>
+
+<p>Bandwidth: amount of information<br>
+Latency: lag time
+Latency on phones is high which is why it’s slow and the number of users with higher latency is going to increase (more people using mobile)</p>
+
+<p>Aggressive, but good goals:<br>
+1. Deliver a fast mobile web page load (show above-fold content in <1 second, serve above-fold content, including critical path CSS, in first 14KB of response)<br>
+2. Speed index &lt;1000<br>
+3. Delight users<br></p>
+
+<p>Recommended Tools<br>
+&ndash; <a href="http://www.webpagetest.org/">WebPageTest</a><br>
+&ndash; <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a>: can run URL through and provides recommendations<br>
+&ndash; <a href="https://developers.google.com/speed/pagespeed/module">PageSpeed Module</a>: plugin for Apache or NGiNX <br></p>
+
+<h3>The Chroma Zone: Engineering Color on the Web (Lea Verou, W3C CSS Working Group Invited Expert)</h3>
+
+
+<ul>
+  <li>Lightness is not a good deciding metric for whether you should put white or black text on top of color background - relative luminence instead?</li>
+  <li>Variables in CSS coming (e.g. currentColor is currently available but limited)</li>
+  <li>4-digit hex code (last for alpha)</li>
+  <li>HWB = hue whiteness blackness</li>
+</ul>
+
+
+
+
+<h3>Mind the Gap: Designing in the Space Between Devices (Josh Clark, Principal, Global Moxie)</h3>
+
+
+<p>67% users start shopping on one device and continue on another and have to think about each device and also the gaps between</p>
+
+<p>Sometimes don’t even need the internet to have device exchange:<br>
+&ndash; WebSockets<br>
+&ndash; WebRTC<br>
+&ndash; Bluetooth LE<br></p>
+
+<p>Bridge the physical and the digital</p>
+
+<p>Giving digital a physical presence and vice versa</p>
+
+<p>Neat Examples<br>
+&ndash; <a href="https://github.com/houseoflegend/happytogether">Making devices happier together =)</a><br>
+&ndash; <a href="https://github.com/aral/GrabMagic">Grab screen from tv and put it on the phone</a><br></p>
+
+<h3>Web+: Can the Web Win the War Against Native Without Losing its Soul? (Bruce Lawson, Developer Relations, Opera)</h3>
+
+
+<p>Reasons people prefer native vs. mobile web
+&ndash; Device-specific functionality<br>
+&ndash; Offline capability<br>
+&ndash; Faster performance (local storage)<br>
+&ndash; Familiar<br>
+&ndash; Mobile users bookmark by downloading native app (vs. bookmarking in browser)<br></p>
+
+<p>10% of users bookmark a page (computer) and is less on mobile</p>
+
+<p>For mobile users &ndash; installing IS bookmarking</p>
+
+<p>On the web &ndash; the conversation can happen in real time (instant updates vs. downloading updates with a native app)</p>
+
+<h3>How to Champion Ideas Back at Work (Scott Berkun, Author, The Year Without Pants)</h3>
+
+
+<p>&ldquo;The real designer is the person with the power to make decisions&rdquo;<br><br>
+1. Get idea<br>
+2. Build it<br>
+3. Ship it<br></p>
+
+<p>Between steps 1 &amp; 2 &ndash; need to convince people to build and maybe between 2 &amp; 3 &ndash; need to convince to ship (lots of convincing needs to happen)</p>
+
+<p>Find ways to bring ideas while mitigating risk</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Beginner Vim Commands]]></title>
